@@ -5,6 +5,10 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <link rel="icon" type="image/x-icon" href="/images/logo.png"></link>
+        <meta
+          http-equiv="Content-Security-Policy"
+          content="upgrade-insecure-requests"
+        />
       </Head>
       <body>
         <Main />
