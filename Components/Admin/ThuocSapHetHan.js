@@ -47,7 +47,7 @@ const ThuocSapHetHan = () => {
   useEffect(() => {
     // danh sách thuốc sắp hết hạn
     fetch(
-      "http://localhost:8080/QLNT-Server/quan-ly/thong-ke/thong-ke-thuoc-sap-het-han"
+      "http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/quan-ly/thong-ke/thong-ke-thuoc-sap-het-han"
     )
       .then((response) => response.json())
       .then((data) => {

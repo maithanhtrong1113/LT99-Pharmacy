@@ -83,7 +83,7 @@ const ContentChiTietThuoc = (props) => {
     fetchDataNuocSanXuat();
     // danh sách loại thuốc truyền vào select option
     fetch(
-      "http://localhost:8080/QLNT-Server/nhan-vien/thuoc-va-loai-thuoc/loai-thuoc/"
+      "http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/nhan-vien/thuoc-va-loai-thuoc/loai-thuoc/"
     )
       .then((response) => response.json())
       .then((data) => {
@@ -92,7 +92,7 @@ const ContentChiTietThuoc = (props) => {
       .catch((error) => console.error(error));
     // Thông tin lịch sử nhập thuốc
     fetch(
-      `http://localhost:8080/QLNT-Server/quan-ly/thuoc-va-loai-thuoc/thuoc/${id}/lich-su-nhap-thuoc`
+      `http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/quan-ly/thuoc-va-loai-thuoc/thuoc/${id}/lich-su-nhap-thuoc`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -107,7 +107,7 @@ const ContentChiTietThuoc = (props) => {
     if (typeof id === "string") {
       try {
         const response = await fetch(
-          `http://localhost:8080/QLNT-Server/nhan-vien/thuoc-va-loai-thuoc/thuoc/${id}`
+          `http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/nhan-vien/thuoc-va-loai-thuoc/thuoc/${id}`
         );
         const data = await response.json();
         console.log(data);
@@ -145,7 +145,7 @@ const ContentChiTietThuoc = (props) => {
     // chỉnh sửa thông tin  thuốc
 
     fetch(
-      `http://localhost:8080/QLNT-Server/quan-ly/thuoc-va-loai-thuoc/loai-thuoc/${loaiThuocSelected}/thuoc/${id}`,
+      `http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/quan-ly/thuoc-va-loai-thuoc/loai-thuoc/${loaiThuocSelected}/thuoc/${id}`,
       {
         method: "PUT",
         headers: {
@@ -196,7 +196,7 @@ const ContentChiTietThuoc = (props) => {
         : { maNuoc: selectedNSX };
 
     fetch(
-      `http://localhost:8080/QLNT-Server/quan-ly/thuoc-va-loai-thuoc/thuoc/${id}/nhap-thuoc`,
+      `http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/quan-ly/thuoc-va-loai-thuoc/thuoc/${id}/nhap-thuoc`,
       {
         method: "POST",
         headers: {

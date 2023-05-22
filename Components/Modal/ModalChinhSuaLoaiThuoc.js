@@ -31,7 +31,7 @@ function ModalChinhSuaLoaiThuoc(props) {
   // lấy thông tin loại thuốc
   useEffect(() => {
     fetch(
-      `http://localhost:8080/QLNT-Server/nhan-vien/thuoc-va-loai-thuoc/loai-thuoc/${props.loaiThuoc.maLoai}`
+      `http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/nhan-vien/thuoc-va-loai-thuoc/loai-thuoc/${props.loaiThuoc.maLoai}`
     )
       .then((response) => response.json())
       .then((data) => {

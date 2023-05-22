@@ -38,7 +38,7 @@ const ContentLoaiThuoc = () => {
     if (searchTerm.length > 0) {
       const newTimeoutId = setTimeout(() => {
         fetch(
-          `http://localhost:8080/QLNT-Server/nhan-vien/thuoc-va-loai-thuoc/tim-loai-thuoc?keyword=${encodeURIComponent(
+          `http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/nhan-vien/thuoc-va-loai-thuoc/tim-loai-thuoc?keyword=${encodeURIComponent(
             searchTerm
           )}`
         )
@@ -53,7 +53,7 @@ const ContentLoaiThuoc = () => {
       setTimeoutId(newTimeoutId);
     } else {
       fetch(
-        "http://localhost:8080/QLNT-Server/nhan-vien/thuoc-va-loai-thuoc/loai-thuoc/"
+        "http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/nhan-vien/thuoc-va-loai-thuoc/loai-thuoc/"
       )
         .then((response) => response.json())
         .then((data) => {

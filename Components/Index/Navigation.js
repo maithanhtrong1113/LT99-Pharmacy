@@ -87,7 +87,7 @@ const Navigation = () => {
     if (searchTerm.length > 0) {
       const newTimeoutId = setTimeout(() => {
         fetch(
-          `http://localhost:8080/QLNT-Server/khach-hang/xem-thuoc/tim-thuoc?keyword=${encodeURIComponent(
+          `http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/khach-hang/xem-thuoc/tim-thuoc?keyword=${encodeURIComponent(
             searchTerm
           )}`
         )

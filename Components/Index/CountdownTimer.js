@@ -9,7 +9,7 @@ function CountdownTimer() {
   const [dsThuoc, setDsThuoc] = useState([]);
   useEffect(() => {
     fetch(
-      "http://localhost:8080/QLNT-Server/khach-hang/xem-thuoc/danh-sach-thuoc"
+      "http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/khach-hang/xem-thuoc/danh-sach-thuoc"
     )
       .then((response) => {
         if (!response.ok) {

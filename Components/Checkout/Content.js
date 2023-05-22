@@ -47,7 +47,7 @@ const Content = () => {
       });
       console.log(thongTinKhachHang.diaChi);
       fetch(
-        "http://localhost:8080/QLNT-Server/khach-hang/don-hang/tao-don-hang",
+        "http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/khach-hang/don-hang/tao-don-hang",
         {
           method: "POST",
           headers: {

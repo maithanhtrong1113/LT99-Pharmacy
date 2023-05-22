@@ -68,7 +68,7 @@ const ContentThongKe = () => {
     const StringNgayKetThuc = ngayKetThuc.toISOString().slice(0, 10);
     //lấy tên loại thuốc, số lượng tồn, số lượng nhập, số lượng xuất của thuốc
     fetch(
-      `http://localhost:8080/QLNT-Server/quan-ly/thong-ke/thong-ke-xuat-nhap-ton/theo-ngay?ngayBatDau=${StringNgayBatDau}&ngayKetThuc=${StringNgayKetThuc}`
+      `http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/quan-ly/thong-ke/thong-ke-xuat-nhap-ton/theo-ngay?ngayBatDau=${StringNgayBatDau}&ngayKetThuc=${StringNgayKetThuc}`
     )
       .then((response) => response.json())
       .then((data) => {

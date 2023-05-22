@@ -3,21 +3,21 @@ import { toast } from "react-toastify";
 
 export const getNhanVienTheoCaLamViec = async (maCaLam) => {
   const response = await fetch(
-    `http://localhost:8080/QLNT-Server/quan-ly/ca-lam-viec/${maCaLam}`
+    `http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/quan-ly/ca-lam-viec/${maCaLam}`
   );
   const data = await response.json();
   return data;
 };
 export const getAllNhanVien = async () => {
   const response = await fetch(
-    `http://localhost:8080/QLNT-Server/quan-ly/danh-sach-nhan-vien`
+    `http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/quan-ly/danh-sach-nhan-vien`
   );
   const data = await response.json();
   return data;
 };
 export const chinhSuaNhanVienByQuanLy = async (data) => {
   const response = await fetch(
-    `http://localhost:8080/QLNT-Server/quan-ly/nhan-vien/${data.maNhanVien}`,
+    `http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/quan-ly/nhan-vien/${data.maNhanVien}`,
     {
       method: "PUT",
       headers: {
@@ -53,8 +53,8 @@ export const changePass = async (data, role) => {
   const id = localStorage.getItem("id");
   const url =
     role === 1
-      ? `http://localhost:8080/QLNT-Server/quan-ly/doi-mat-khau/${id}`
-      : `http://localhost:8080/QLNT-Server/nhan-vien/doi-mat-khau/${id}`;
+      ? `http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/quan-ly/doi-mat-khau/${id}`
+      : `http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/nhan-vien/doi-mat-khau/${id}`;
   const response = await fetch(`${url}`, {
     method: "PUT",
     headers: {
@@ -85,7 +85,7 @@ export const changePass = async (data, role) => {
 
 export const chinhSuaThongTinCaNhan = async (data) => {
   const response = await fetch(
-    `http://localhost:8080/QLNT-Server/quan-ly/cap-nhat-thong-tin-ca-nhan/${data.maNhanVien}`,
+    `http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/quan-ly/cap-nhat-thong-tin-ca-nhan/${data.maNhanVien}`,
     {
       method: "PUT",
       headers: {

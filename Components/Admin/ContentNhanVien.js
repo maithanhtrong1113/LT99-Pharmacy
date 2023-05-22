@@ -41,26 +41,29 @@ const index = () => {
   }
   //Thêm nhân viên và tạo tài khoản
   const addNhanVienSubmit = (data) => {
-    fetch("http://localhost:8080/QLNT-Server/quan-ly/nhan-vien", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        hoTen: data.name,
-        soDienThoai: data.phone,
-        diaChi: data.diaChi,
-        gioiTinh: data.gender,
-        ngaySinh: data.date,
-        caLamViec: { maCaLam: data.caLamViec },
-        ngayVaoLam: Date.now(),
-        taiKhoan: {
-          userName: data.tenDangNhap,
-          password: data.password,
-          quyen: [{ maQuyen: "2", tenQuyen: "EMPLOYEE" }],
+    fetch(
+      "http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/quan-ly/nhan-vien",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-      }),
-    }).then((response) => {
+        body: JSON.stringify({
+          hoTen: data.name,
+          soDienThoai: data.phone,
+          diaChi: data.diaChi,
+          gioiTinh: data.gender,
+          ngaySinh: data.date,
+          caLamViec: { maCaLam: data.caLamViec },
+          ngayVaoLam: Date.now(),
+          taiKhoan: {
+            userName: data.tenDangNhap,
+            password: data.password,
+            quyen: [{ maQuyen: "2", tenQuyen: "EMPLOYEE" }],
+          },
+        }),
+      }
+    ).then((response) => {
       if (response.ok) {
         toast.success("Thêm nhân viên thành công", {
           position: toast.POSITION.TOP_RIGHT,
@@ -99,7 +102,7 @@ const index = () => {
     if (searchTerm.length > 0) {
       const newTimeoutId = setTimeout(() => {
         fetch(
-          `http://localhost:8080/QLNT-Server/quan-ly/nhan-vien/tim-kiem-nhan-vien?keyword=${encodeURIComponent(
+          `http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/quan-ly/nhan-vien/tim-kiem-nhan-vien?keyword=${encodeURIComponent(
             searchTerm
           )}`
         )

@@ -85,7 +85,7 @@ const ContentBanThuoc = () => {
         //all
         if (optionThuoc === "Tất cả") {
           fetch(
-            `http://localhost:8080/QLNT-Server/nhan-vien/thuoc-va-loai-thuoc/tim-thuoc?keyword=${encodeURIComponent(
+            `http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/nhan-vien/thuoc-va-loai-thuoc/tim-thuoc?keyword=${encodeURIComponent(
               searchTerm
             )}`
           )
@@ -98,7 +98,7 @@ const ContentBanThuoc = () => {
             });
         } else if (optionThuoc === "Chỉ thuốc kê đơn") {
           fetch(
-            `http://localhost:8080/QLNT-Server/nhan-vien/thuoc-va-loai-thuoc/danh-sach-thuoc-ke-don?keyword=${encodeURIComponent(
+            `http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/nhan-vien/thuoc-va-loai-thuoc/danh-sach-thuoc-ke-don?keyword=${encodeURIComponent(
               searchTerm
             )}`
           )
@@ -119,7 +119,7 @@ const ContentBanThuoc = () => {
             });
         } else if (optionThuoc === "Chỉ thuốc không kê đơn") {
           fetch(
-            `http://localhost:8080/QLNT-Server/nhan-vien/thuoc-va-loai-thuoc/danh-sach-thuoc-khong-ke-don?keyword=${encodeURIComponent(
+            `http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/nhan-vien/thuoc-va-loai-thuoc/danh-sach-thuoc-khong-ke-don?keyword=${encodeURIComponent(
               searchTerm
             )}`
           )
@@ -157,7 +157,7 @@ const ContentBanThuoc = () => {
     if (searchTerm1.length > 0) {
       const newTimeoutId1 = setTimeout(() => {
         fetch(
-          `http://localhost:8080/QLNT-Server/nhan-vien/quan-ly-khach-hang/tim-khach-hang?keyword=${encodeURIComponent(
+          `http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/nhan-vien/quan-ly-khach-hang/tim-khach-hang?keyword=${encodeURIComponent(
             searchTerm1
           )}`
         )
@@ -268,7 +268,7 @@ const ContentBanThuoc = () => {
       }
 
       fetch(
-        `http://localhost:8080/QLNT-Server/nhan-vien/hoa-don/lap-hoa-don-theo-toa`,
+        `http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/nhan-vien/hoa-don/lap-hoa-don-theo-toa`,
         {
           method: "POST",
           headers: {
@@ -312,7 +312,7 @@ const ContentBanThuoc = () => {
       });
 
       fetch(
-        `http://localhost:8080/QLNT-Server/nhan-vien/hoa-don/lap-hoa-don-khong-theo-toa`,
+        `http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/nhan-vien/hoa-don/lap-hoa-don-khong-theo-toa`,
         {
           method: "POST",
           headers: {
@@ -367,7 +367,7 @@ const ContentBanThuoc = () => {
     }
 
     fetch(
-      "http://localhost:8080/QLNT-Server/nhan-vien/quan-ly-khach-hang/khach-hang",
+      "http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/nhan-vien/quan-ly-khach-hang/khach-hang",
       {
         method: "POST",
         headers: {

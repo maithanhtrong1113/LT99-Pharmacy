@@ -31,7 +31,7 @@ function ModalUpdateIn4(props) {
   useEffect(() => {
     const id = localStorage.getItem("id");
     fetch(
-      `http://localhost:8080/QLNT-Server/quan-ly/nhan-vien/xem-thong-tin-nhan-vien/${id}`
+      `http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/quan-ly/nhan-vien/xem-thong-tin-nhan-vien/${id}`
     )
       .then((response) => response.json())
       .then((data) => {

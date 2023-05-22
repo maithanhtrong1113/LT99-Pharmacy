@@ -1,7 +1,7 @@
 import { toast } from "react-toastify";
 export const getAllCaLamViec = async () => {
   const response = await fetch(
-    `http://localhost:8080/QLNT-Server/quan-ly/ca-lam-viec/`
+    `http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/quan-ly/ca-lam-viec/`
   );
   if (response.status === 204) return [];
   const data = await response.json();
@@ -10,7 +10,7 @@ export const getAllCaLamViec = async () => {
 };
 export const themCaLamViec = async (data) => {
   const response = await fetch(
-    "http://localhost:8080/QLNT-Server/quan-ly/ca-lam-viec/ ",
+    "http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/quan-ly/ca-lam-viec/ ",
     {
       method: "POST",
       headers: {
@@ -40,7 +40,7 @@ export const themCaLamViec = async (data) => {
 };
 export const xoaCaLamViec = async (id) => {
   const res = await fetch(
-    `http://localhost:8080/QLNT-Server/quan-ly/ca-lam-viec/${id}`,
+    `http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/quan-ly/ca-lam-viec/${id}`,
     {
       method: "DELETE",
       headers: {
@@ -66,7 +66,7 @@ export const xoaCaLamViec = async (id) => {
 };
 export const chinhSuaCaLamViec = async (data) => {
   const response = await fetch(
-    `http://localhost:8080/QLNT-Server/quan-ly/ca-lam-viec/${data.maCaLam}`,
+    `http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/quan-ly/ca-lam-viec/${data.maCaLam}`,
     {
       method: "PUT",
       headers: {

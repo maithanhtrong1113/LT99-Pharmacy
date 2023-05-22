@@ -1,14 +1,14 @@
 import { toast } from "react-toastify";
 export const getAllKhachHang = async () => {
   const response = await fetch(
-    `http://localhost:8080/QLNT-Server/nhan-vien/quan-ly-khach-hang/danh-sach-khach-hang`
+    `http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/nhan-vien/quan-ly-khach-hang/danh-sach-khach-hang`
   );
   const data = await response.json();
   return data;
 };
 export const themKhachHang = async (data) => {
   const response = await fetch(
-    "http://localhost:8080/QLNT-Server/nhan-vien/quan-ly-khach-hang/khach-hang ",
+    "http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/nhan-vien/quan-ly-khach-hang/khach-hang ",
     {
       method: "POST",
       headers: {

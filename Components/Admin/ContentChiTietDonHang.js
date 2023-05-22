@@ -10,7 +10,9 @@ const ContentChiTietDonHang = () => {
   const { id } = router.query;
   const [detail, setDetails] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:8080/QLNT-Server/nhan-vien/don-hang-online/${id}`)
+    fetch(
+      `http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/nhan-vien/don-hang-online/${id}`
+    )
       .then((response) => response.json())
       .then((data) => {
         console.log(data);

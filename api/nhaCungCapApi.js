@@ -1,7 +1,7 @@
 import { toast } from "react-toastify";
 export const getAllNhaCungCap = async () => {
   const response = await fetch(
-    `http://localhost:8080/QLNT-Server/quan-ly/nha-cung-cap/`
+    `http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/quan-ly/nha-cung-cap/`
   );
   if (response.status === 204) return [];
   const data = await response.json();
@@ -10,7 +10,7 @@ export const getAllNhaCungCap = async () => {
 };
 export const themNhaCungCap = async (data) => {
   const response = await fetch(
-    "http://localhost:8080/QLNT-Server/quan-ly/nha-cung-cap/",
+    "http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/quan-ly/nha-cung-cap/",
     {
       method: "POST",
       headers: {
@@ -41,7 +41,7 @@ export const themNhaCungCap = async (data) => {
 };
 export const xoaNhaCungCap = async (id) => {
   const res = await fetch(
-    `http://localhost:8080/QLNT-Server/quan-ly/nha-cung-cap/${id}`,
+    `http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/quan-ly/nha-cung-cap/${id}`,
     {
       method: "DELETE",
       headers: {
@@ -67,7 +67,7 @@ export const xoaNhaCungCap = async (id) => {
 };
 export const chinhSuaNhaCungCap = async (data) => {
   const response = await fetch(
-    `http://localhost:8080/QLNT-Server/quan-ly/nha-cung-cap/${data.maNhaCungCap}`,
+    `http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/quan-ly/nha-cung-cap/${data.maNhaCungCap}`,
     {
       method: "PUT",
       headers: {
@@ -98,7 +98,7 @@ export const chinhSuaNhaCungCap = async (data) => {
 };
 export const getAllLoThuocFromNhaCungCap = async (maNhaCungCap) => {
   const response = await fetch(
-    `http://localhost:8080/QLNT-Server/quan-ly/nha-cung-cap/${maNhaCungCap}/xem-lo-thuoc-da-cung-cap`
+    `http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/quan-ly/nha-cung-cap/${maNhaCungCap}/xem-lo-thuoc-da-cung-cap`
   );
   if (response.status === 204) return [];
   const data = await response.json();

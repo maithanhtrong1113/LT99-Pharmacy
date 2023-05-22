@@ -19,7 +19,7 @@ function ModalAddKhachHangHD(props) {
   const onSubmit = (data) => {
     data.date = new Date(data.date).toLocaleDateString("vi-VN");
     fetch(
-      "http://localhost:8080/QLNT-Server/nhan-vien/quan-ly-khach-hang/khach-hang",
+      "http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/nhan-vien/quan-ly-khach-hang/khach-hang",
       {
         method: "POST",
         headers: {

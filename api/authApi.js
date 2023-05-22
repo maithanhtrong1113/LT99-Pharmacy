@@ -1,16 +1,19 @@
 import { toast } from "react-toastify";
 
 export const Login = async (data) => {
-  const response = await fetch(`http://localhost:8080/QLNT-Server/api/login`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      username: data.username,
-      password: data.password,
-    }),
-  });
+  const response = await fetch(
+    `http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/api/login`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username: data.username,
+        password: data.password,
+      }),
+    }
+  );
   if (response.ok) {
     const res = await response.json();
     return res;

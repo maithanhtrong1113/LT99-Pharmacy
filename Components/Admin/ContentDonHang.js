@@ -88,7 +88,7 @@ const ContentDonHang = () => {
     if (searchTerm.length > 0) {
       const newTimeoutId = setTimeout(() => {
         fetch(
-          `http://localhost:8080/QLNT-Server/nhan-vien/don-hang-online/tim-don-hang?keyword=${encodeURIComponent(
+          `http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/nhan-vien/don-hang-online/tim-don-hang?keyword=${encodeURIComponent(
             searchTerm
           )}`
         )

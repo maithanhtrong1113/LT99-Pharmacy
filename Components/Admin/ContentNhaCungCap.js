@@ -30,7 +30,7 @@ const ContentNhaCungCap = () => {
     if (searchTerm1.length > 0) {
       const newTimeoutId1 = setTimeout(() => {
         fetch(
-          `http://localhost:8080/QLNT-Server/quan-ly/nha-cung-cap/tim-nha-cung-cap?keyword=${encodeURIComponent(
+          `http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/quan-ly/nha-cung-cap/tim-nha-cung-cap?keyword=${encodeURIComponent(
             searchTerm1
           )}`
         )

@@ -2,21 +2,21 @@ import { toast } from "react-toastify";
 
 export const getAllThuoc = async () => {
   const response = await fetch(
-    "http://localhost:8080/QLNT-Server/nhan-vien/thuoc-va-loai-thuoc/thuoc"
+    "http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/nhan-vien/thuoc-va-loai-thuoc/thuoc"
   );
   const data = await response.json();
   return data;
 };
 export const getThuocTheoLoai = async (loaiThuocSelected) => {
   const response = await fetch(
-    `http://localhost:8080/QLNT-Server/nhan-vien/thuoc-va-loai-thuoc/loai-thuoc/${loaiThuocSelected}/thuoc`
+    `http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/nhan-vien/thuoc-va-loai-thuoc/loai-thuoc/${loaiThuocSelected}/thuoc`
   );
   const data = await response.json();
   return data;
 };
 export const themThuoc = async (data) => {
   const res = await fetch(
-    `http://localhost:8080/QLNT-Server/quan-ly/thuoc-va-loai-thuoc/${data.maLoai}/thuoc`,
+    `http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/quan-ly/thuoc-va-loai-thuoc/${data.maLoai}/thuoc`,
     {
       method: "POST",
       headers: {
@@ -58,7 +58,7 @@ export const themThuoc = async (data) => {
 };
 export const xoaThuoc = async (data) => {
   const res = await fetch(
-    `http://localhost:8080/QLNT-Server/quan-ly/thuoc-va-loai-thuoc/thuoc/${data}`,
+    `http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/quan-ly/thuoc-va-loai-thuoc/thuoc/${data}`,
     {
       method: "DELETE",
       headers: {
@@ -86,7 +86,7 @@ export const xoaThuoc = async (data) => {
 };
 export const getAllThuocTheoLoai = async (id) => {
   const response = await fetch(
-    `http://localhost:8080/QLNT-Server/khach-hang/xem-thuoc/loai-thuoc/${id}/thuoc`
+    `http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/khach-hang/xem-thuoc/loai-thuoc/${id}/thuoc`
   );
   const data = await response.json();
   return data;

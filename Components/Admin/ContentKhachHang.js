@@ -39,7 +39,7 @@ const ContentKhachHang = () => {
     if (searchTerm1.length > 0) {
       const newTimeoutId1 = setTimeout(() => {
         fetch(
-          `http://localhost:8080/QLNT-Server/nhan-vien/quan-ly-khach-hang/tim-khach-hang?keyword=${encodeURIComponent(
+          `http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/nhan-vien/quan-ly-khach-hang/tim-khach-hang?keyword=${encodeURIComponent(
             searchTerm1
           )}`
         )
@@ -54,7 +54,7 @@ const ContentKhachHang = () => {
       setTimeoutId1(newTimeoutId1);
     } else {
       fetch(
-        `http://localhost:8080/QLNT-Server/nhan-vien/quan-ly-khach-hang/danh-sach-khach-hang`
+        `http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/nhan-vien/quan-ly-khach-hang/danh-sach-khach-hang`
       )
         .then((response) => response.json())
         .then((data) => {
@@ -67,7 +67,7 @@ const ContentKhachHang = () => {
   const changein4Customer = (data) => {
     console.log(data);
     fetch(
-      `http://localhost:8080/QLNT-Server/khach-hang/thong-tin-khach-hang/${data.maKhachHang}/cap-nhat-thong-tin-ca-nhan`,
+      `http://kl-env.eba-eyz5qutv.ap-southeast-1.elasticbeanstalk.com/khach-hang/thong-tin-khach-hang/${data.maKhachHang}/cap-nhat-thong-tin-ca-nhan`,
       {
         method: "PUT",
         headers: {
